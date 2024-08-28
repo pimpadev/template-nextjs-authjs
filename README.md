@@ -31,7 +31,7 @@ The first command generates Prisma Client, which is an auto-generated database c
 npx prisma generate
 ```
 
-<u>When to use it:</u>
+<ins>When to use it:</ins>
 
 - After modifying the schema.prisma file.
 - When you need to regenerate the Prisma client to reflect changes in your schema.
@@ -47,7 +47,7 @@ Migrations are a way to keep your database schema in sync with your application'
 npx prisma migrate dev
 ```
 
-<u>When to use it:</u>
+<ins>When to use it:</ins>
 
 - After making changes to your schema (schema.prism) that affect the database structure.
 - When you are developing and need to apply these changes to your local or development database.
@@ -60,7 +60,7 @@ This command applies all pending migrations to your database in the current envi
 npx prisma migrate deploy
 ```
 
-<u>When to use it:</u>
+<ins>When to use it:</ins>
 
 - Use a CI system (e.g. GitHub Actions) to sync your Prisma schema and migration history with your preview database using prisma migrate deploy.
 
@@ -78,7 +78,7 @@ This command synchronizes your database with the Prisma schema without generatin
 npx prisma db push
 ```
 
-<u>When to use it:</u>
+<ins>When to use it:</ins>
 
 - When you want to reflect quick database changes without creating migrations.
 - Ideal for prototyping or during the early stages of development, when you do not need a migration history.
@@ -92,7 +92,7 @@ This command introspects the existing database and updates your `schema.prisma` 
 npx prisma db pull
 ```
 
-<u>When to use it:</u>
+<ins>When to use it:</ins>
 
 - When you have an existing database and want to generate the Prisma schema from its current structure.
 - Useful if other changes have been made directly to the database and you need to reflect these changes in your `schema.prisma` file.

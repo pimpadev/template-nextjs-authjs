@@ -25,3 +25,8 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
 To learn more about AuthJS, take a look at the following resources:
 
 - [AuthJS Documentation](https://authjs.dev/getting-started/installation?framework=next.js)
+
+To test the behaviour, these are the available urls by default:
+
+- Sign In: http://localhost:3000/api/auth/signin
+- Sign Out: http://localhost:3000/api/auth/signout

@@ -4,6 +4,7 @@ import NextAuth from "next-auth";
 import { prisma } from "./lib/prisma";
 import { LoginSchema } from "./schemas";
 import Google from "next-auth/providers/google";
+import { sendEmailVerification } from "./lib/resend";
 import { PrismaAdapter } from "@auth/prisma-adapter";
 import Credentials from "next-auth/providers/credentials";
 
@@ -61,7 +62,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
             },
           });
 
-          //await sendEmailVerification(user.email, token);
+          await sendEmailVerification(user.email, token);
 
           throw new Error("Please check your email for the verification link");
         }

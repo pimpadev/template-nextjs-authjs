@@ -96,3 +96,16 @@ npx prisma db pull
 
 - When you have an existing database and want to generate the Prisma schema from its current structure.
 - Useful if other changes have been made directly to the database and you need to reflect these changes in your `schema.prisma` file.
+
+## Resend
+
+[Resend](https://resend.com/home) is an API platform focused on facilitating the sending of transactional and marketing emails. It stands out for offering a modern and easy-to-integrate infrastructure for developers, allowing them to send emails directly from their applications with ease.
+
+We will use it to manage the sending of emails to verify accounts and to reset passwords.
+
+Is important to define two environment variables:
+
+- `NEXTAUTH_URL`: The base url of your application.
+- `AUTH_RESEND_KEY`: The API key for your Resend account.
+
+Additionally there is an associated TODO in your API endpoint (for example, /verify-email). It can be used to redirect to a particular page alluding to the verification performed. This way you can set up concrete behaviors.

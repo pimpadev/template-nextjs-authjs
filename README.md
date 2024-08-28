@@ -30,3 +30,5 @@ To test the behaviour, these are the available urls by default:
 
 - Sign In: http://localhost:3000/api/auth/signin
 - Sign Out: http://localhost:3000/api/auth/signout
+
+## Prisma

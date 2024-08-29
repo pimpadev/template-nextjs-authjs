@@ -2,7 +2,19 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
-First, run the development server:
+### Env variables
+
+The first thing to do is to fill in the environment variables. You must make a copy of the `.env.example` file (creating an `.env` file) and fill it with all the variables present there.
+
+### Running the project
+
+First we will want to start a database since every user that registers on the platform will persist. To do this, we run the following command to raise a database that will serve us for development:
+
+```zsh
+docker compose up -d
+```
+
+Then we can run the development server:
 
 ```zsh
 pnpm dev

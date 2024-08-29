@@ -14,6 +14,8 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
   secret: process.env.AUTH_SECRET,
   providers: [
     Google({
+      clientId: process.env.AUTH_GOOGLE_ID,
+      clientSecret: process.env.AUTH_GOOGLE_SECRET,
       allowDangerousEmailAccountLinking: true,
     }),
     Credentials({
@@ -75,16 +77,18 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
   callbacks: {
     // jwt() is executed every time a JWT is created or updated
     // Here you can add additional information to the token
-    jwt({ token, user }) {
+    async jwt({ token, user }) {
       if (user) {
+        token.id = user.id;
         token.roles = user.roles;
       }
       return token;
     },
     // session() is used to add the token information to the user's session
     // This allows it to be available in the client
-    session({ session, token }) {
+    async session({ session, token }) {
       if (session.user) {
+        session.user.id = token.id ?? "";
         session.user.roles = token.roles;
       }
       return session;

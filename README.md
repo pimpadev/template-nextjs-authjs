@@ -4,6 +4,10 @@
   [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/F1F314ZLPT)
 </div>
 
+<div align="center">
+ <img src="public/portada.jpg" alt="Descripción de la imagen" height="500" />
+</div>
+
 ## Getting Started
 
 ### Env variables

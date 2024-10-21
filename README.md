@@ -1,4 +1,4 @@
-# Nextjs w/ AuthJS Template
+# NextJS w/ AuthJS Template
 <div align="right">
   
   [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/F1F314ZLPT)
